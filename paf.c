@@ -2,6 +2,7 @@
 //Sebastian Muñoz Amigo
 //Lenguaje de programacion
 #include <stdio.h>
+#include <stdlib.h>
 #include <math.h>
 #define MAX 50
 
@@ -17,6 +18,8 @@ int main(){
 	}
 	
 	Arreglo=Array; //RD
+	entrada=fopen("entrada.txt","r"); //se abre el archivo
+	salida=fopen("salida.txt","w+"); // ve si existe el archivo salida de lo contrario se crea la salida
 	fscanf(entrada,"%d",&N);
 
 	for(i=0;i<N;i++){//Ciclo para leer los digitos del arreglo;
@@ -51,4 +54,3 @@ int main(){
 	fprintf(salida,"%d",mDiferencia );	
 	return 0;
 }
-
